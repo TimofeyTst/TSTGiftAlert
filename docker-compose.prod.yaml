@@ -1,0 +1,15 @@
+services:
+  gift_alerter:
+    container_name: gift_alerter
+    image: gift_alerter
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    volumes:
+      - ./:/src
+
+volumes:
+  gift_alerter_pg_data:
+    driver: local

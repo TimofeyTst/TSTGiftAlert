@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "gift-alerter"
+version = "0.1.0"
+description = "Alert about tg gifts"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.12.13"
+aiogram = "^3.21.0"
+pydantic-settings = "^2.10.1"
+sqlalchemy = "^2.0.41"
+aiosqlite = "^0.21.0"
+greenlet = "^3.0"
+aiopg = "^1.4.0"
+asyncpg = "^0.29"
+yoyo-migrations = "^8.2"
+
+
+[tool.poetry.scripts]
+main = "gift_alerter.main:main"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.12.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

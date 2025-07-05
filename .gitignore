@@ -1,0 +1,24 @@
+# logs
+logs/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# .vscode
+.vscode/
+
+# OS files
+.DS_Store
+
+# .idea
+.idea/
+
+.local/

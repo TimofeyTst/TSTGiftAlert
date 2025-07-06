@@ -1,6 +1,5 @@
 import aiopg
 from aiopg.pool import Cursor
-import ssl
 from contextlib import asynccontextmanager
 from psycopg2.extras import RealDictCursor  # type: ignore
 from typing import AsyncGenerator
@@ -10,8 +9,6 @@ from gift_alerter.logger.logger import get_logger
 
 
 logger = get_logger(__name__)
-
-SSL_CTX = ssl.create_default_context(cafile="/Users/timofeytst/.postgresql/root.crt")
 
 @asynccontextmanager
 async def get_connection(dsn=settings.RESOURCES.POSTGRES.DSN) -> AsyncGenerator[Cursor, None]:

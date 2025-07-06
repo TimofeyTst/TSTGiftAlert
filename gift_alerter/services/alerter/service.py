@@ -48,7 +48,7 @@ class GiftAlerter:
         message_text = await self._build_message(gifts)
         await self.bot.send_message(chat_id=settings.CHANNEL_ID, text=message_text)
 
-    async def process_new_gifts(self, gifts) -> None:
+    async def process_new_gifts(self, new_gifts) -> None:
         logger.info("Alerting about new gifts in db transaction...")
 
         async with get_connection() as conn:

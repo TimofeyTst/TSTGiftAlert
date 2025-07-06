@@ -50,3 +50,4 @@ def get_logger(name):
     logger.addHandler(get_stream_handler())
     logger.setLevel("INFO")
     return logger
+
